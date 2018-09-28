@@ -1,0 +1,16 @@
+server:
+  port: 8081
+#zk地址
+spring:
+  dubbo:
+    registry:
+      address: 172.26.1.53:2181
+    #dubbo协议
+    protocol:
+      name: dubbo
+      #duboo端口号
+      port: 20880
+# 日志输出级别
+logging:
+  level:
+    com.cxs: debug
