@@ -1,16 +1,32 @@
 server:
   port: 8081
-#zk��ַ
 spring:
+  # zookeeper地址
   dubbo:
     registry:
       address: 172.26.1.53:2181
-    #dubboЭ��
+    # dubbo协议
     protocol:
       name: dubbo
-      #duboo�˿ں�
+      # duboo端口号
       port: 20880
-# ��־�������
+  rabbitmq:
+    host: 172.26.1.53
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    # 开启发送确认
+    publisher-confirms: true
+    # 开启发送失败退回
+    publisher-returns: true
+    # 开启ACK
+    listener:
+      direct:
+        acknowledge-mode: manual
+      simple:
+        acknowledge-mode: manual
+# 日志输出级别
 logging:
   level:
     com.cxs: debug

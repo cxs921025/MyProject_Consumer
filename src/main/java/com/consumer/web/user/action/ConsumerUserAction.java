@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/web/consumerUser")
 public class ConsumerUserAction {
 
+    private final SysUserService sysUserService;
+
     @Autowired
-    private SysUserService sysUserService;
+    public ConsumerUserAction(SysUserService sysUserService) {
+        this.sysUserService = sysUserService;
+    }
 
     @RequestMapping("getUserModelWithBlurry")
     public SysUserModel getUserModelWithBlurry(String name) {
