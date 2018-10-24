@@ -14,12 +14,12 @@ import org.springframework.stereotype.Component;
  * 系统级用户消息队列
  */
 @Component
-public class SysUserRecive {
+public class SysUserReceive {
 
     private final SysUserService sysUserService;
 
     @Autowired
-    public SysUserRecive(SysUserService sysUserService) {
+    public SysUserReceive(SysUserService sysUserService) {
         this.sysUserService = sysUserService;
     }
 
