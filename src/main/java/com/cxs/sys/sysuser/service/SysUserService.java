@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * 系统级用户服务层
  */
 @Component
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "unchecked"})
 public interface SysUserService {
     /**
      * 获取用户权限

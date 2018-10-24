@@ -34,7 +34,7 @@ public class SysUserReceive {
         try {
             LogUtil.info("[RabbitMq]: 接收到消息,消息参数: " + loginName);
             System.out.println(sysUserService.getUserModelWithBlurry(loginName));
-            // 告诉服务器已收到消息
+            // 通知服务器已收到消息
             channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
         } catch (Exception e) {
             LogUtil.error("[RabbitMq]: 出错,错误信息: " + e.getMessage());
