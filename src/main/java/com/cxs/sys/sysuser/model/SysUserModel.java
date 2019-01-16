@@ -3,13 +3,15 @@ package com.cxs.sys.sysuser.model;
 import lombok.Builder;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author ChenXS
  * 系统级用户实体
  */
 @Data
 @Builder
-public class SysUserModel {
+public class SysUserModel  implements Serializable {
 
     /**
      * 主键
@@ -34,7 +36,7 @@ public class SysUserModel {
     /**
      * 电子邮箱
      */
-    private String Email;
+    private String email;
     /**
      * 权限表主键
      */

@@ -9,6 +9,7 @@ import java.io.StringWriter;
  * @author ChenXS
  * 日志打印工具类
  */
+@SuppressWarnings("all")
 public class LogUtil {
     public static Logger log = Logger.getLogger(LogUtil.class);
 

@@ -19,7 +19,6 @@ public class ConsumerUserAction {
 
     @RequestMapping("getUserModelWithBlurry")
     public SysUserModel getUserModelWithBlurry(String name) {
-        SysUserModel userModel = sysUserService.getUserModelWithBlurry(name);
-        return userModel;
+        return sysUserService.getUserModelWithBlurry(name);
     }
 }
